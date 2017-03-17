@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalendarView" customModule="AppusCalendar" customModuleProvider="target">
+            <connections>
+                <outlet property="calendarCollectionView" destination="YHI-2t-tiF" id="d5J-EU-QMb"/>
+                <outlet property="contentView" destination="JhG-9O-MSt" id="Rkk-QR-LfE"/>
+                <outlet property="monthTitlesCollectionView" destination="GlV-zB-dYF" id="iAZ-1m-RYf"/>
+                <outlet property="titlesHeightConstraint" destination="EVA-yU-Xy3" id="uXO-C4-CRI"/>
+                <outlet property="weekdaysCollectionView" destination="Byz-Tt-DdW" id="0a2-JV-GgX"/>
+                <outlet property="weekdaysHeightConstraint" destination="8Bn-cw-awI" id="94p-sv-AyR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JhG-9O-MSt">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GlV-zB-dYF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="EVA-yU-Xy3"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8ur-UG-JdL">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Byz-Tt-DdW">
+                    <rect key="frame" x="0.0" y="40" width="375" height="35"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="8Bn-cw-awI"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4mN-bP-Xf1">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="YHI-2t-tiF" customClass="CalendarCollectionView" customModule="AppusCalendar" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="75" width="375" height="125"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AHA-l0-xuD">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Byz-Tt-DdW" firstAttribute="top" secondItem="GlV-zB-dYF" secondAttribute="bottom" id="49D-Pb-LYS"/>
+                <constraint firstItem="YHI-2t-tiF" firstAttribute="leading" secondItem="JhG-9O-MSt" secondAttribute="leading" id="8wz-Qx-Ewn"/>
+                <constraint firstAttribute="trailing" secondItem="Byz-Tt-DdW" secondAttribute="trailing" id="IMY-3u-f8a"/>
+                <constraint firstAttribute="trailing" secondItem="GlV-zB-dYF" secondAttribute="trailing" id="Rwd-K8-E1z"/>
+                <constraint firstItem="GlV-zB-dYF" firstAttribute="leading" secondItem="JhG-9O-MSt" secondAttribute="leading" id="VzO-aP-ZXO"/>
+                <constraint firstAttribute="bottom" secondItem="YHI-2t-tiF" secondAttribute="bottom" id="Wo5-Lf-2BQ"/>
+                <constraint firstItem="GlV-zB-dYF" firstAttribute="top" secondItem="JhG-9O-MSt" secondAttribute="top" id="Ww3-OG-p5f"/>
+                <constraint firstItem="Byz-Tt-DdW" firstAttribute="leading" secondItem="JhG-9O-MSt" secondAttribute="leading" id="XL8-hF-U1L"/>
+                <constraint firstAttribute="trailing" secondItem="YHI-2t-tiF" secondAttribute="trailing" id="fn2-Ge-J7z"/>
+                <constraint firstItem="YHI-2t-tiF" firstAttribute="top" secondItem="Byz-Tt-DdW" secondAttribute="bottom" id="oUw-hO-3jn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="235" y="-90"/>
+        </view>
+    </objects>
+</document>

@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  # s.authors            = { "Yaroslav K." => "yaroslav.kolesnik@appus.me" }
+  s.authors            = { "Yaroslav K." => "yaroslav.kolesnik@appus.me", "Anton P." => "anton.poltoratskiy@appus.me" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
